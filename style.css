@@ -81,11 +81,11 @@ body {
 }
 
 .price::before {
-  background: url("/images/icon-ethereum.svg") no-repeat;
+  background: url("images/icon-ethereum.svg") no-repeat;
 }
 
 .time::before {
-  background: url("/images/icon-clock.svg") no-repeat;
+  background: url("images/icon-clock.svg") no-repeat;
 }
 
 .line {
