@@ -1,0 +1,112 @@
+/* ***** */
+/* VARS */
+/* ***** */
+
+:root {
+  /* Primary */
+  --clr-soft-blue: hsl(215, 51%, 70%);
+  --clr-cyan: hsl(178, 100%, 50%);
+  /* Neutral */
+  --bg: hsl(217, 54%, 11%);
+  --bg-card: hsl(216, 50%, 16%);
+  --clr-line: hsl(215, 32%, 27%);
+  --clr-black: hsl(0, 0%, 0%);
+  --clr-white: hsl(0, 0%, 100%);
+
+  /* Typography */
+  --ff-sans-normal: "Outfit", sans-serif;
+  --fs-900: 3rem;
+  --fs-800: 2.25rem;
+  --fs-700: 1.75rem;
+  --fs-600: 1.5rem;
+  --fs-500: 1.225rem;
+  --fs-400: 1.125rem;
+  --fs-300: 1rem;
+  --fs-200: 0.875rem;
+  /* utilities */
+  --border-rad: 1rem;
+  --line-height: 1.5;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: var(--bg-card);
+  max-width: 360px;
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.equilibrium {
+  border-radius: 1rem;
+}
+
+.card h1 {
+  font-size: var(--fs-600);
+  font-weight: 600;
+  margin: 1rem 0;
+}
+
+.p-main,
+.time,
+.author {
+  font-size: var(--fs-300);
+  font-weight: 300;
+  color: var(--clr-soft-blue);
+  margin: 0.5rem 0;
+}
+.price-time {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  color: var(--clr-cyan);
+  display: inline-block;
+}
+
+.price::before,
+.time::before {
+  content: "";
+  display: inline-block;
+  width: var(--fs-300);
+  height: var(--fs-300);
+  margin: 0 4px 4px 0;
+  vertical-align: middle;
+}
+
+.price::before {
+  background: url("/images/icon-ethereum.svg") no-repeat;
+}
+
+.time::before {
+  background: url("/images/icon-clock.svg") no-repeat;
+}
+
+.line {
+  width: 100%;
+  opacity: 0.3;
+  margin: 1rem 0;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.avatar {
+  border: white solid 2px;
+  border-radius: 50%;
+  max-height: 3rem;
+}
+
+footer {
+  text-align: center;
+  font-size: var(--fs-200);
+}
