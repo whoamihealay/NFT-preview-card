@@ -42,14 +42,49 @@ body {
   padding: 1.5rem;
 }
 
-.equilibrium {
+.wrapper {
+  position: relative;
   border-radius: 1rem;
+  overflow: hidden;
+  --overlay: 0;
+  --overlay-img: 0;
+}
+
+.wrapper:hover {
+  --overlay: 0.4;
+  --overlay-img: 1;
+  cursor: pointer;
+}
+
+.wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--clr-cyan);
+  z-index: 1000;
+  opacity: var(--overlay);
+}
+
+.wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url(./images/icon-view.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: var(--overlay-img);
+  z-index: 1001;
 }
 
 .card h1 {
   font-size: var(--fs-600);
   font-weight: 600;
   margin: 1rem 0;
+}
+
+.card h1:hover {
+  cursor: pointer;
+  color: var(--clr-cyan);
 }
 
 .p-main,
@@ -98,6 +133,15 @@ body {
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+
+.author-name {
+  color: white;
+}
+
+.author-name:hover {
+  cursor: pointer;
+  color: var(--clr-cyan);
 }
 
 .avatar {
